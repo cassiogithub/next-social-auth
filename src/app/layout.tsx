@@ -14,12 +14,14 @@ const roboto = Roboto({
     subsets: ['latin'],
 })
 
+export const metadata = {
+    title: 'Cassio - Login Social',
+    description: 'Criado por Cássio Rodrigues.',
+}
+
 export default function RootLayout({params, children}: IRootLayoutProps) {
     return (
         <html lang="pt-BR">
-        <Head>
-            <title>Cassio Login Auth</title>
-        </Head>
         <body className={roboto.className}>
         <Providers params={params}>
             {children}
