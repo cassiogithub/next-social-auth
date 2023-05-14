@@ -1,12 +1,11 @@
 import React from 'react'
-import Head from "next/head";
-import Providers from "@/app/providers";
+import {Providers} from "@/app/providers";
+import {RootLayoutProps} from "@/app/(interfaces)/IRootLayoutProps";
 
 import {Roboto} from 'next/font/google'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
-import {IRootLayoutProps} from "@/pages/interfaces/Layouts/IRootLayoutProps";
 
 
 const roboto = Roboto({
@@ -19,7 +18,7 @@ export const metadata = {
     description: 'Criado por Cássio Rodrigues.',
 }
 
-export default function RootLayout({params, children}: IRootLayoutProps) {
+export default function RootLayout({params, children}: RootLayoutProps) {
     return (
         <html lang="pt-BR">
         <body className={roboto.className}>

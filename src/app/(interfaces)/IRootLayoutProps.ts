@@ -1,7 +1,7 @@
-import React from "react";
 import {Session} from "next-auth";
+import React from 'react'
 
-export interface IRootLayoutProps {
+export interface RootLayoutProps {
     children: React.ReactNode,
     params: {
         session: Session

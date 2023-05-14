@@ -2,9 +2,9 @@
 
 import React from 'react'
 import {SessionProvider} from "next-auth/react";
-import {IRootLayoutProps} from "@/pages/interfaces/Layouts/IRootLayoutProps";
+import {RootLayoutProps} from "@/app/(interfaces)/IRootLayoutProps";
 
-export default function Providers(props: IRootLayoutProps) {
+export function Providers(props: RootLayoutProps) {
     const {children, params} = props;
 
     return (
