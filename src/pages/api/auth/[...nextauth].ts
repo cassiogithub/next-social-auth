@@ -9,10 +9,6 @@ export default NextAuth({
         GithubProvider({
             clientId: GITHUB_ID as string,
             clientSecret: GITHUB_SECRET as string,
-        }),
-        Keycloak({
-            clientId: GITHUB_ID as string,
-            clientSecret: GITHUB_SECRET as string,
         })
     ],
     callbacks: {}
