@@ -10,5 +10,5 @@ export default NextAuth({
             clientSecret: GITHUB_SECRET as string,
         })
     ],
-    callbacks: {}
+    callbacks: {} // TODO: // Redirecionar singIn direto para o github auth
 })

@@ -1,38 +1,30 @@
-'use client';
-
 import React from 'react'
 import Head from "next/head";
+import Providers from "@/app/providers";
 
 import {Roboto} from 'next/font/google'
-import {SessionProvider} from "next-auth/react";
-import {Session} from "next-auth";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
+import {IRootLayoutProps} from "@/pages/interfaces/Layouts/IRootLayoutProps";
+
 
 const roboto = Roboto({
     weight: '400',
     subsets: ['latin'],
 })
 
-interface RootLayoutProps {
-    children: React.ReactNode,
-    params: {
-        session: Session
-    }
-}
-
-export default function RootLayout({ children, params }: RootLayoutProps) {
+export default function RootLayout({params, children}: IRootLayoutProps) {
     return (
-      <html lang="pt-BR">
-      <Head>
-        <title>Cassio Login Auth</title>
-      </Head>
-      <body className={roboto.className}>
-        <SessionProvider session={params.session}>
+        <html lang="pt-BR">
+        <Head>
+            <title>Cassio Login Auth</title>
+        </Head>
+        <body className={roboto.className}>
+        <Providers params={params}>
             {children}
-        </SessionProvider>
-      </body>
-      </html>
+        </Providers>
+        </body>
+        </html>
     )
 }
